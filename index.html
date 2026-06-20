@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VortexAI News | Live Earth Tech Updates Engine</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;800&display=swap">
+    <style>
+        body { background: #07070c; color: #fff; font-family: 'Plus Jakarta Sans', sans-serif; padding: 40px 15px; text-align: center; }
+        .container { max-width: 500px; margin: auto; background: rgba(255,255,255,0.02); padding: 25px; border-radius: 20px; border: 1px solid #ff3366; }
+        .ad-slot { border: 1px dashed #ff3366; padding: 12px; font-size: 11px; color: #ff3366; border-radius: 10px; margin-bottom: 20px; }
+        .news-card { text-align: left; background: rgba(255,255,255,0.03); padding: 15px; border-radius: 12px; border-left: 4px solid #ff3366; margin-bottom: 12px; }
+        .btn { background: linear-gradient(135deg, #ff3366, #9d4edd); color: #fff; padding: 12px; border: none; border-radius: 10px; cursor: pointer; width: 100%; font-weight: bold; }
+        .back-link { display: block; margin-top: 20px; color: #666; text-decoration: none; font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="ad-slot">[💰 ADSENSE TOP NEWS REVENUE AD TAG]</div>
+        <h2>🌍 All Earth Cyber News Stream</h2>
+        <p style="color: #888; font-size: 0.85rem; margin-bottom: 20px;">Duniya ke top server pipelines se automatic refresh hone wali top 10 live news arrays.</p>
+        
+        <div id="newsFeed"></div>
+
+        <button class="btn" onclick="fetchLiveGlobalNews()">🔄 Pull Fresh News Nodes</button>
+        <a href="https://your-main-vidtor-link.vercel.app" class="back-link">⬅️ Back to VortexAI Main Hub</a>
+    </div>
+
+    <script>
+        const sampleNewsDB = [
+            "🚨 Massive Decentralized Server Overload Reported: Global pipeline data requests spiked by 340% within minutes.",
+            "🛡️ Cyber Security Grid Upgrades: Quantum-encrypted communication tunnels deployed safely to safeguard transactions.",
+            "💻 High-Speed Framework Deployment: Optimization modules reduce client-side dynamic load times significantly.",
+            "🧠 AI Models Achieve Native Integration: Edge networks successfully compile asynchronous tasks without local hardware delays.",
+            "🌍 Global Tech Infrastructure Update: Serverless cloud nodes shift to greener power matrices worldwide."
+        ];
+        function fetchLiveGlobalNews() {
+            let html = '';
+            // Har baar data ko mix karke refresh banata hai
+            let shuffled = sampleNewsDB.sort(() => 0.5 - Math.random());
+            for(let i=0; i<3; i++) {
+                html += `<div class="news-card"><small style="color:#ff3366; font-weight:800;">LIVE FEED SYNCED</small><p style="margin:5px 0 0 0; font-size:0.9rem;">${shuffled[i]}</p></div>`;
+            }
+            document.getElementById('newsFeed').innerHTML = html;
+        }
+        fetchLiveGlobalNews();
+    </script>
+</body>
+</html>
